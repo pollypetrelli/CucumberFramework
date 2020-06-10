@@ -66,10 +66,10 @@ import io.appium.java_client.remote.MobileCapabilityType;
 				
 				System.out.println(fis);
 				prop.load(fis);
-				automationName = prop.getProperty("android_automationName");
-				appPath = prop.getProperty("appPath");
+				//automationName = prop.getProperty("android_automationName");
+				//appPath = prop.getProperty("appPath");
 				platformName = prop.getProperty("platformName");
-				deviceName =prop.getProperty("deviceName");
+				//deviceName =prop.getProperty("deviceName");
 				//appium_port = prop.getProperty("appium.server.port");						
 	}
 			
@@ -78,21 +78,27 @@ import io.appium.java_client.remote.MobileCapabilityType;
 				capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,
 				CommonUtils.platformName);
 				//		"Android");
-				capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,
-				CommonUtils.deviceName);
+				//capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,
+				//CommonUtils.deviceName);
 					//	"Pixel 2 XL API 28");
-				capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,
-				CommonUtils.automationName);
+				//capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,
+				//CommonUtils.automationName);
 						//"UiAutomator2");
-				capabilities.setCapability(MobileCapabilityType.APP, 
-						CommonUtils.appPath);
+				//capabilities.setCapability(MobileCapabilityType.APP, 
+					//	CommonUtils.appPath);
 					//	System.getProperty("user.dir")+"//App//ApiDemos.apk");
 			//	capabilities.setCapability("appActivity","com.swaglabsmobileapp.SplashActivity");
 			//	capabilities.setCapability("appWaitActivity", "com.swaglabsmobileapp.SplashActivity");
+				capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"9");
+				capabilities.setCapability("appiumVersion", "1.15.1");
+				capabilities.setCapability("testobject_api_key","63AAFEBA1225410E8EF5D2BA808546D8");
+				capabilities.setCapability("deviceOrientation", "portrait"); 
+				capabilities.setCapability("testobject_app_id","1"); 
 			}
 
 			public static AppiumDriver getAndroidDriver() throws MalformedURLException {
-				serverUrl = new URL("http://127.0.0.1:4723/wd/hub");
+				//serverUrl = new URL("http://127.0.0.1:4723/wd/hub");
+				serverUrl = new URL("https://appium.testobject.com/wd/hub");
 			//+ appium_port + "/wd/hub");		
 				driver = new AndroidDriver(serverUrl, capabilities);
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
