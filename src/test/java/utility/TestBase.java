@@ -44,7 +44,7 @@ public class TestBase {
 	//public static String IOSloadPropertyFile = "IOS_App.properties";
 	//public static Properties props=new Properties();
 	//public static String scrPath;
-	public String platform="Android";
+	public String platform;
 	
 
 	
@@ -52,8 +52,7 @@ public class TestBase {
 	public void setUpAppium() throws IOException
 	{
 	
-		
-	//	platform  = System.getProperty("platform");
+		platform  = System.getProperty("platform");
 		platform = platform.toLowerCase().trim();
 		
 		if(driver==null){
