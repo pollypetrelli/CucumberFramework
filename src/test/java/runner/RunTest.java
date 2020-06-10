@@ -1,14 +1,9 @@
 package runner;
 
 import org.testng.annotations.Test;
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-
-/**
- * @author CHIRAG
- *
- */
 
 // Uncomment @RunWith if you are using Junit to run Test 
 // @RunWith(Cucumber.class)
