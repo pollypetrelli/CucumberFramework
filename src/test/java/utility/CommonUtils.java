@@ -91,7 +91,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 			//	capabilities.setCapability("appWaitActivity", "com.swaglabsmobileapp.SplashActivity");
 				capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"9");
 				capabilities.setCapability("appiumVersion", "1.15.1");
-				capabilities.setCapability("testobject_api_key","63AAFEBA1225410E8EF5D2BA808546D8");
+				capabilities.setCapability("testobject_api_key","A144F67B2EE24C7486EC66C085C2BA48");
 				capabilities.setCapability("deviceOrientation", "portrait"); 
 				capabilities.setCapability("testobject_app_id","1"); 
 			}
